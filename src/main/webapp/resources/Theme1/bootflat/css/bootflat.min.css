@@ -305,7 +305,7 @@ blockquote {
 .btn-group-vertical .btn-danger:first-child, .btn-group-vertical .btn-info:first-child,
 	.btn-group-vertical .btn-primary:first-child, .btn-group-vertical .btn-success:first-child,
 	.btn-group-vertical .btn-warning:first-child, .btn-group-vertical .btn:not
-	 (.btn-default ):first-child {
+	(.btn-default ):first-child {
 	border-top: none
 }
 
@@ -460,79 +460,10 @@ blockquote {
 	vertical-align: top
 }
 
-.breadcrumb-arrow
-
-
-
-
- 
-
-
-
-
-li
-
-
-
-
-
-
-
-
-:not
-
-
-
-
- 
-
-
-
-
-(
-:first-child
-
-
-
-
- 
-
-
-
-
-){
-margin-left
-
-
-
-
-
-
-
-
-:
-
-
-
-
- 
-
-
-
-
--5
-px
-
-
-
-
-
-
-
-
-
-
+.breadcrumb-arrow li:not (:first-child ){
+	margin-left: -5px
 }
+
 .breadcrumb-arrow li+li:before {
 	padding: 0;
 	content: ""

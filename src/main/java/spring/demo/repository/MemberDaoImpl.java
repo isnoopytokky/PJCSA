@@ -59,8 +59,8 @@ public class MemberDaoImpl implements MemberDao {
 		// TODO Auto-generated method stub
 		Criteria cr = session.getCurrentSession().createCriteria(Member.class);
 
-		if (member.getAddress() != "")
-			cr.add(Restrictions.like("address", "%"+member.getAddress()+"%"));
+//		if (member.getAddress() != "")
+//			cr.add(Restrictions.like("address", "%"+member.getAddress()+"%"));
 		
 		if (member.getUser() != "")
 			cr.add(Restrictions.like("user", "%"+member.getUser()+"%"));
@@ -71,24 +71,24 @@ public class MemberDaoImpl implements MemberDao {
 		if (member.getName() != "")
 			cr.add(Restrictions.like("name", "%"+member.getName()+"%"));
 		
-		if (member.getAddress() != "")
-			cr.add(Restrictions.like("address", "%"+member.getAddress()+"%"));
-		
-		if (member.getCreated() != ""){
-			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-			Date date = new Date();
-			cr.add(Restrictions.between("created", member.getCreated(),date+""));
-		}
-		
-		if (member.getDistricts().getDistrictId() != null){
-			cr.add(Restrictions.eq("districts",member.getDistricts() ));
-		}else if ( member.getDistricts().getAmphures().getAmphurId() > 0 ){
-			cr.createAlias("districts.amphures", "amphures");
-			cr.add(Restrictions.eq("amphures.amphurId",member.getDistricts().getAmphures().getAmphurId() ));
-		}else if ( member.getDistricts().getAmphures().getProvinces().getprovinceId() > 0 ){
-			cr.createAlias("districts.amphures.provinces", "provinces");
-			cr.add(Restrictions.eq("provinces.provinceId",member.getDistricts().getAmphures().getProvinces().getprovinceId() ));
-		}
+//		if (member.getAddress() != "")
+//			cr.add(Restrictions.like("address", "%"+member.getAddress()+"%"));
+//		
+//		if (member.getCreated() != ""){
+//			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+//			Date date = new Date();
+//			cr.add(Restrictions.between("created", member.getCreated(),date+""));
+//		}
+//		
+//		if (member.getDistricts().getDistrictId() != null){
+//			cr.add(Restrictions.eq("districts",member.getDistricts() ));
+//		}else if ( member.getDistricts().getAmphures().getAmphurId() > 0 ){
+//			cr.createAlias("districts.amphures", "amphures");
+//			cr.add(Restrictions.eq("amphures.amphurId",member.getDistricts().getAmphures().getAmphurId() ));
+//		}else if ( member.getDistricts().getAmphures().getProvinces().getprovinceId() > 0 ){
+//			cr.createAlias("districts.amphures.provinces", "provinces");
+//			cr.add(Restrictions.eq("provinces.provinceId",member.getDistricts().getAmphures().getProvinces().getprovinceId() ));
+//		}
 		
 		return cr.list();
 		 

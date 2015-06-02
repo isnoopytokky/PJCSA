@@ -27,15 +27,15 @@ public class Member {
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="created")
-	private String created;
+//	@Column(name="created")
+//	private String created;
 	
-	@Column(name="address")
-	private String address;
+//	@Column(name="address")
+//	private String address;
 	
-	@ManyToOne
-	@JoinColumn(name="districts_DISTRICT_ID")
-	private Districts districts;
+//	@ManyToOne
+//	@JoinColumn(name="districts_DISTRICT_ID")
+//	private Districts districts;
 	
 	public int getId() {
 		return id;
@@ -68,41 +68,41 @@ public class Member {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public String getCreated() {
-		return created;
-	}
-
-	public void setCreated(String created) {
-		this.created = created;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
- public Districts getDistricts() {
-		return districts;
-	}
-
-	public void setDistricts(Districts districts) {
-		this.districts = districts;
-	}
-
-	public String getProfile() {
-		return profile;
-	}
-
-	public void setProfile(String profile) {
-		this.profile = profile;
-	}
- 
-	
-	@Column(name="profile")
-	private String profile;
+//
+//	public String getCreated() {
+//		return created;
+//	}
+//
+//	public void setCreated(String created) {
+//		this.created = created;
+//	}
+//
+//	public String getAddress() {
+//		return address;
+//	}
+//
+//	public void setAddress(String address) {
+//		this.address = address;
+//	}
+//
+// public Districts getDistricts() {
+//		return districts;
+//	}
+//
+//	public void setDistricts(Districts districts) {
+//		this.districts = districts;
+//	}
+//
+//	public String getProfile() {
+//		return profile;
+//	}
+//
+//	public void setProfile(String profile) {
+//		this.profile = profile;
+//	}
+// 
+//	
+//	@Column(name="profile")
+//	private String profile;
 	
 }
