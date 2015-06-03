@@ -3,7 +3,6 @@
 <%@ include file="/WEB-INF/pages/includes.jsp"%>
 <%@ include file="/WEB-INF/pages/external.jsp"%> 
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,6 +21,8 @@
 
 </head>
 
+<body>
+	
 <header class="header"> <nav
 	class="navbar navbar-default navbar-fixed-top">
 <div class="container-fluid">
@@ -54,66 +55,57 @@
 	</div>
 </div>
 </nav> </header>
-<body>
-	<div class="section-bg">
-		<div class="container">
-			<img class="icon"
-				src="<c:url value=  "resources/bootflat/img/b2.png"/> "
-				height="100"> <br>
-			<div>
-				<h3 class="homepage-title">ระบบการจัดการฟาร์ม :
-					ระบบออกใบสูจิบัตรโคประกวดโคประมูล</h3>
-			</div>
-			<div>
-				<h3 class="homepage-subtitle">Farm Management System : Certificate of Cattle Shows and Auction System Phase 2</h3>
-			</div>
-		</div>
-		<br> <br> <br> <br>
-	</div>
-
-
-	<div class="container">
-		<!-- modal -->
-		<div id="log" class="modal fade">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true"></button>
-						<h3 class="modal-title">Login</h3>
-					</div>
-					<div class="modal-body">
-						<div class="row form-group">
-							<div class="col-md-offset-2 col-md-2">
-								<h4>Username:</h4>
-							</div>
-							<div class="col-md-6">
-								<input type="text" class="form-control">
-							</div>
-						</div>
-						<div class="row form-group">
-							<div class="col-md-offset-2 col-md-2">
-								<h4>Password:</h4>
-							</div>
-							<div class="col-md-6">
-								<input type="password" class="form-control">
-							</div>
-						</div>
-					</div>
-					
+ 
+		
+		<h1><center>สมัครสมาชิก</center></h1>
+		<hr>
+	 <div class="row demo-row">
+        <div class="col-xs-3"></div>
+          <div class="col-xs-6">
+	<form action="register.jsp" method="post">
+  <div class="container">
+		<form class="form-horizontal" role="form">
+			
+			<div class="form-group">
+		<br>	<label class="control-label col-sm-2" for="user">ชื่อผู้ใช้</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="user" id="user" value="" placeholder="ชื่อผู้ใช้" required>
 				</div>
 			</div>
-		</div>
-		<!-- modal -->
+			
+			<div class="form-group">
+		<br>	<label class="control-label col-sm-2" for="pass1">รหัสผ่าน</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control" name="pass1" id="pass1" value="" placeholder="รหัสผ่าน" required>
+				</div>
+			</div>
+			
+			<br>
+			<div class="form-group">
+				<br><div class="col-sm-offset-2 col-sm-10">
+			<input type="submit" name="submit" id="submit" value="เข้าสู่ระบบ" class="btn btn-info">
+            </div></div> 
+	
+		</form>
 	</div>
-
-	<footer class="footer" role="cententinof">
-	<div class="contrainer">
-		<p style="color: white;">Copyright © 2014 - 2015</p>
 		
+	</form>
+	</div>
+	</div>
+	
+<br><br><br>
+	<footer class="footer">
+	<div class="container">
+		<p>
+			<font color="white">© 2014-2015</font>
+		</p>
+		<p class="text-muted">
+		
+		</p>
 	</div>
 	</footer>
-	<script src="<c:url value="/resources/js/jquery-2.1.3.min.js"/>"></script>
-	<script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
+	
+ <script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

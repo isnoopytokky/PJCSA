@@ -80,4 +80,14 @@ public class MainController {
 	public ModelAndView about(){			
 		return new ModelAndView("about/index");
 	}
+	
+	@RequestMapping(value="/register")
+	public ModelAndView register(){			
+		return new ModelAndView("register/index");
+	}
+	
+	@RequestMapping(value="/login")
+	public ModelAndView login(){			
+		return new ModelAndView("login/index");
+	}
 }

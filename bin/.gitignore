@@ -1,0 +1,7 @@
+/META-INF/
+/WEB-INF/
+/hibernate.cfg.xml
+/hibernate.reveng.xml
+/log4j.xml
+/resources/
+/spring/
